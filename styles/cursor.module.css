@@ -1,0 +1,19 @@
+.cursor_follower {
+    position: fixed;
+    pointer-events: none; /* Pour que le curseur ne soit pas bloqué */
+    z-index: 999; /* Pour qu'il soit au-dessus des autres éléments */
+  }
+  
+  .cursor_dot {
+    width: 30px;
+    height: 30px;
+    background-color: #00FFEA;
+    border-radius: 50%;
+  }
+  @media (max-width: 800px) {
+    .cursor_follower{
+      display: none;
+    }
+
+  
+    }

@@ -1,0 +1,85 @@
+.hero_section {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/noova.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    animation: scale 0.5s ease-in-out;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    /* Ensure it's above other elements */
+
+}
+@keyframes scale {
+  from {
+    transform: scale(2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes op {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.title_hero {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+    color: white;
+    font-size: 250px;
+    margin: 0%;
+    height: 250px;
+    letter-spacing: 16px;
+    animation: op 3s;
+}
+
+.paragraphe_hero {
+    font-family: 'Nexa-ExtraLight', sans-serif;
+    color: white;
+    font-size: 16px;
+    /* animation: op 3s; */
+}
+
+.btn_contact {
+    border-radius: 50px;
+    border: none;
+    padding: 16px 40px;
+    color: black;
+    transform: translateY(50%);
+    font-weight: bold;
+    background-color: #00FFEA;
+    cursor: pointer;
+    /* animation: op 3s; */
+}
+@media (max-width: 980px) {
+    .title_hero{
+      font-size: 200px;
+      height: fit-content;
+    }
+    .btn_contact{
+        transform: translateY(0);
+    }
+  }
+  @media (max-width: 600px) {
+    .title_hero{
+      font-size: 90px;
+      text-align: center;
+      height: fit-content;
+    }
+    
+  }

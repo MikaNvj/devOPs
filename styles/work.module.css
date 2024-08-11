@@ -1,0 +1,70 @@
+.work_section{
+    width: 100%;
+    height: fit-content;
+    min-height: 500px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-sizing: border-box;
+    z-index: 99;
+    background-color: white;
+}
+.cardwork{
+    /* background-color: red; */
+    /* "group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200" */
+    position: relative;
+    height: 50vh;
+    border-radius: 16px;
+    width: 550px;
+    overflow: hidden;
+}
+.card_wrap{
+    /* flex gap-4 */
+    display: flex;
+    gap: 4px;
+    scroll-behavior: smooth;
+}
+.title_work {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+    color: rgb(0, 13, 54);
+    text-transform: uppercase;
+    font-size: 200px;
+    margin: 0%;
+    letter-spacing: 16px;
+    height: 200px;
+}
+.contentmotion{
+    /* sticky top-0 flex h-screen items-center overflow-hidden */
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-items: center;
+    overflow: hidden;
+}
+.cardwork .img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+@media (max-width: 800px) {
+  .cardwork{
+    width: 400px;
+    /* height: 200px; */
+  }
+    .title_work{
+      font-size: 40px;
+      height: fit-content;
+      letter-spacing: 5px;
+    }
+
+  }
+  @media (max-width: 300px) {
+    .title_work{
+      font-size: 30px;
+      height: fit-content;
+      letter-spacing: 5px;
+    }
+
+  }

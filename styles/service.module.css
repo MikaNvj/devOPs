@@ -1,0 +1,91 @@
+.service_section {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/noova.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    /* Ensure it's above other elements */
+
+}
+.back_section{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/noova.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 12;
+}
+
+.title_service{
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+    color: white;
+    font-size: 200px;
+    margin: 0%;
+    /* letter-spacing: 16px; */
+    /* height: 400px */
+}
+.service_wrap{
+    display: flex;
+    gap: 16px;
+}
+
+
+.btn_service{
+    border-radius: 50px;
+    border: none;
+    padding: 16px 40px;
+    color: black;
+    font-weight: bold;
+    background-color: #00FFEA;
+    cursor: pointer;
+}
+.btn_service1{
+    border-radius: 50px;
+    border: none;
+    padding: 16px 40px;
+    color: black;
+    font-weight: bold;
+    background-color: #ffbf00;
+    cursor: pointer;
+}
+@media (max-width: 980px) {
+    .title_service{
+      font-size: 200px;
+      height: fit-content;
+    }
+    .btn_contact{
+        transform: translateY(0);
+    }
+  }
+  @media (max-width: 600px) {
+    .title_service{
+      font-size: 50px;
+      text-align: center;
+      height: fit-content;
+    }
+    .service_wrap{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+  }

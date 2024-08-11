@@ -1,0 +1,171 @@
+.back_section {
+    width: 100%;
+    height: auto;
+    background-image: url('../assets/noova.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    color: white;
+    /* position: sticky; */
+    top: 0;
+    z-index: 15;
+}
+
+.tab input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.tab__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+    /* border-bottom: .5px rgb(176, 176, 176) solid; */
+
+}
+
+.tab input:checked~.tab__content {
+    max-height: fit-content;
+
+}
+
+
+.accordion {
+    font-family: 'Nexa-ExtraLight', sans-serif;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab__label,
+.tab__close {
+    display: flex;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+}
+
+.tab__label {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    color: rgb(18, 0, 53);
+    padding: 1rem;
+    position: relative;
+    border-radius: 8px;
+    background-color: #00FFEA;
+    /* background-image: linear-gradient(to right, var(--primary-color) 0%, var(--third-color) 51%, var(--secondary-color) 100%); */
+    box-shadow: 2px 3px 8px 5px rgba(0, 0, 0, 0.089);
+}
+
+.tab {
+    width: 75%;
+    font-family: 'Nexa-ExtraLight', sans-serif;
+}
+
+.accordion .title_faq {
+    display: flex;
+    font-family: "Bebas Neue", sans-serif;
+  font-weight: 900;
+    justify-content: center;
+    width: 80%;
+    text-align: center;
+    font-size: 5.5rem;
+    letter-spacing: 0.2rem;
+    color: white;
+    padding-top: 2svh;
+    margin: 3svh;
+}
+@media (max-width: 500px) {
+    .title_faq{
+      font-size: 40px!important;
+    }
+
+    
+  }
+
+.accordion .paragraphe {
+    color: white;
+    width: 75%;
+    text-align: justify;
+}
+@media (max-width: 500px) {
+    .accordion{
+      padding: 4px;
+      width: 100%;
+    }
+    .accordion .paragraphe{
+        width: 95%;
+    }
+    .accordion .tab__label{
+        width: 90%;
+        padding: 16px;
+    }
+    .accordion .tab{
+        width: 95%;
+    }
+    
+  }
+
+
+.tab__label>span {
+    height: 48px;
+    width: 48px;
+    border-radius: 12px;
+    background-color: #8636a9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab__label::after {
+    content: "\276F";
+    position: absolute;
+    left: 95%;
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transform: rotate(90deg);
+    transition: all 0.35s;
+    float: right;
+}
+
+.tab input:checked+.tab__label::after {
+    transform: rotate(270deg);
+}
+
+.tab__content p {
+    margin: 0;
+    padding: 1rem;
+
+}
+
+.tab__close {
+    justify-content: flex-end;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+}
+
+.tab input:not(:checked)+.tab__label:hover::after {
+    animation: bounce .5s infinite;
+}
+
+@keyframes bounce {
+    25% {
+        transform: rotate(90deg) translate(.25rem);
+    }
+
+    75% {
+        transform: rotate(90deg) translate(-.25rem);
+    }
+}
